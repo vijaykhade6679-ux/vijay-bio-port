@@ -1,0 +1,95 @@
+
+
+body {
+    /* Set up Flexbox for centering content horizontally */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    position: relative; /* Needed for z-index context */
+}
+
+/* Background Video */
+.bkvd {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Main Heading (Name) */
+.bio {
+    /* Changed position to relative/static so it flows naturally in the flex column */
+    position: relative;
+    color: #00faff;
+    text-shadow: 3px 3px 5px;
+    z-index: 10;
+    /* Use vw for font size to scale with the viewport width */
+    font-size: 8vw; /* Scales well on most screens */
+    margin-top: 50px; /* Space from the top */
+    text-align: center;
+}
+
+
+.pht {
+    position: relative; 
+    text-align: center;
+    color: #00ffdd;
+    box-shadow: 0 0 20px #00ffdd; 
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 30px; 
+    z-index: 10;
+}
+
+
+.dibba {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%; 
+    max-width: 400px;
+    position: relative;
+    z-index: 10;
+}
+
+
+.box1, .box2 {
+    
+    border: 1px solid #00faff;
+    border-radius: 10px;
+    color: floralwhite;
+    padding: 15px 30px;
+    margin: 10px 0; 
+    text-decoration: none;
+    width: 100%; 
+    text-align: center;
+    box-sizing: border-box; }
+
+
+
+@media (max-width: 768px) {
+    
+    .bio {
+        font-size: 15vw; 
+        margin-top: 20px;
+    }
+    
+    .pht {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 20px;
+    }
+
+    .box1, .box2 {
+        padding: 12px 20px; 
+        font-size: 1.1em;
+    }
+}
